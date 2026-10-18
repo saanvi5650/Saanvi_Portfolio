@@ -4,9 +4,9 @@
    EDIT THESE BEFORE DEPLOYING
    ════════════════════════════════════════════ */
 const CONFIG = {
-  email: 'hello@example.com',                 // used by the postcard form + email button
-  linkedin: 'https://www.linkedin.com/',      // paste your full profile URL
-  github: 'https://github.com/',              // paste your full profile URL
+  email: 'saanvi0565@gmail.com',                 // used by the postcard form + email button
+  linkedin: 'https://www.linkedin.com/in/saanvi-singh-5767253b0/',      // paste your full profile URL
+  github: 'https://github.com/saanvi5650/Saanvi_Portfolio',              // paste your full profile URL
   resume: '',                                 // e.g. 'assets/Saanvi_Singh_Resume.pdf' — leave '' to hide resume buttons
   timezone: 'Asia/Kolkata',                   // shown in the little "local time" chip
 };
