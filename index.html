@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script>document.documentElement.classList.add('js');</script>
+  <meta name="description" content="Saanvi Singh — computer science student, builder, organiser and curious human." />
+  <meta name="theme-color" content="#f7f0fb" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Saanvi Singh — Portfolio" />
+  <meta property="og:description" content="Computer science student, builder, organiser and curious human. A little corner of the internet that feels like me." />
+  <!-- After deploying, add an absolute image URL for link previews (LinkedIn, WhatsApp, etc.):
+  <meta property="og:image" content="https://YOUR-DOMAIN/assets/hero-cafe.jpeg" /> -->
+  <title>Saanvi Singh — Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%23d9c9ec'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='%234a334f'%3E✦%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Saanvi home">Saanvi<span>✦</span></a>
+    <button class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#work">Things I’ve Built</a>
+      <a href="#beyond">Beyond Work</a>
+      <a href="#contact">Links</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ───────── HERO ───────── -->
+    <section class="hero paper torn-bottom" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="tape tape-small intro" id="hello" style="--d:.1s">welcome to</span>
+        <h1 id="hero-title">Saanvi Singh</h1>
+        <p class="role-line intro" style="--d:1.15s">I’m a <span class="typed-wrap"><span id="typed">computer science student</span><span class="caret" aria-hidden="true"></span></span></p>
+        <p class="handwritten scrib intro" style="--d:1.3s">
+          a little corner of the internet that feels like me.
+          <svg class="squiggle" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 7 C 20 1, 40 12, 60 6 S 100 1, 120 7 S 160 12, 180 6 S 220 1, 240 7 S 280 11, 298 5"/></svg>
+        </p>
+        <p class="hero-text intro" style="--d:1.45s">I like building useful things, understanding how systems work, and turning messy ideas into something people can actually use. I also love cooking up good food and good stories.</p>
+        <div class="hero-actions intro" style="--d:1.6s">
+          <a class="btn primary" href="#journey">my journey ↓</a>
+          <a class="btn ghost" href="#work">see what I build</a>
+          <a class="btn ghost" data-resume hidden download>resume ↓</a>
+        </div>
+        <p class="status intro" style="--d:1.75s"><i aria-hidden="true"></i><span>chennai · <b id="clock">--:--</b> · probably building something</span></p>
+      </div>
+
+      <div class="hero-collage" id="collage">
+        <figure class="polaroid hero-photo drag" style="--depth:10">
+          <img src="assets/hero-cafe.jpeg" width="829" height="1036" alt="Saanvi standing in warm sunlight outside a cafe" draggable="false" />
+          <figcaption>a little more me, right at the start ♡</figcaption>
+        </figure>
+        <div class="washi wash-top" data-depth aria-hidden="true" style="--depth:18"></div>
+        <div class="paperclip" aria-hidden="true" style="--depth:22">⌇</div>
+        <button type="button" class="scribble-note" id="confetti-note" aria-label="Celebrate" style="--depth:26">progress<br>over perfection ♡</button>
+        <svg class="lily lily-hero" viewBox="0 0 140 180" aria-hidden="true" style="--depth:14">
+          <path pathLength="1" style="--i:0" d="M70 173 C72 131 78 92 80 58"/>
+          <path pathLength="1" style="--i:1" d="M80 65 C56 56 42 39 35 20 C58 21 75 35 80 55"/>
+          <path pathLength="1" style="--i:2" d="M81 66 C101 54 118 37 125 18 C100 20 84 34 80 56"/>
+          <path pathLength="1" style="--i:3" d="M80 62 C69 38 70 20 80 6 C91 24 91 42 80 62"/>
+          <path pathLength="1" style="--i:4" d="M75 102 C56 91 46 81 39 66"/>
+          <path pathLength="1" style="--i:5" d="M79 120 C95 110 106 96 112 84"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- washi ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>computer science student</span><i>✦</i><span>builder</span><i>♡</i><span>community organiser</span><i>✦</i><span>coffee + conversations</span><i>♡</i><span>good design with personality</span><i>✦</i><span>ideas I probably don’t need to build</span><i>♡</i>
+        <span>computer science student</span><i>✦</i><span>builder</span><i>♡</i><span>community organiser</span><i>✦</i><span>coffee + conversations</span><i>♡</i><span>good design with personality</span><i>✦</i><span>ideas I probably don’t need to build</span><i>♡</i>
+      </div>
+    </div>
+
+    <!-- ───────── ABOUT ───────── -->
+    <section class="section about" id="about">
+      <div class="section-heading reveal">
+        <h2>Not a pitch. Just me.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <div class="reveal">
+            <p>I’m a Computer Science student at VIT Chennai. I enjoy the space where <strong>software, data, product thinking and people</strong> overlap.</p>
+            <p>I’ve spent the last few years building projects, interning, organising student communities, speaking on stage, and occasionally figuring things out five minutes before they need to work.</p>
+            <p>This portfolio is less “hire me” and more <em>“here’s what I’ve been curious about, what I’ve made, and the people I’ve built it with.”</em></p>
+          </div>
+
+          <div class="receipt-wrap reveal">
+            <div class="receipt" id="receipt">
+              <p class="receipt-title">saanvi’s receipts</p>
+              <p class="receipt-sub">so far · no refunds ♡</p>
+              <div class="r"><span>published patent</span><i></i><b data-count="1">0</b></div>
+              <div class="r"><span>internships</span><i></i><b data-count="2">0</b></div>
+              <div class="r"><span>student communities</span><i></i><b data-count="2">0</b></div>
+              <div class="r"><span>projects written up</span><i></i><b data-count="4">0</b></div>
+              <div class="r"><span>cups of coffee</span><i></i><b>lost count</b></div>
+              <p class="receipt-foot">thank you, come again ✦</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-scrapbook reveal">
+          <figure class="mini-polaroid rotate-left drag">
+            <img src="assets/vit-speaking.jpeg" width="1200" height="1600" loading="lazy" decoding="async" alt="Saanvi speaking at VIT Chennai" draggable="false" />
+            <figcaption>finding my voice, literally</figcaption>
+          </figure>
+          <div class="sticky-note rotate-right drag">
+            <span>currently into</span>
+            <ul>
+              <li>AI + useful software</li>
+              <li>product thinking</li>
+              <li>making messy systems simpler</li>
+              <li>good design with personality</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── JOURNEY ───────── -->
+    <section class="section journey torn-top torn-bottom" id="journey">
+      <div class="section-heading reveal">
+        <span class="kicker">02 · journey</span>
+        <h2>Some chapters I’m proud of.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card reveal">
+          <div class="dot"></div>
+          <div class="year">2025–26</div>
+          <h3>Hack Club · student communities</h3>
+          <p>From operations and organising to bringing people together for events, this is where I learnt that building communities is its own kind of engineering.</p>
+          <figure class="scrap-photo wide rotate-left">
+            <img src="assets/hacknight-team.jpeg" width="1400" height="1050" loading="lazy" decoding="async" alt="Hack Club team at HackNight 2025" />
+            <figcaption>HackNight ’25 — very little sleep, a lot of people, worth it.</figcaption>
+          </figure>
+        </article>
+
+        <article class="timeline-card reveal">
+          <div class="dot"></div>
+          <div class="year">2026</div>
+          <h3>HARMAN International · Product Development Intern</h3>
+          <p>Worked on an internal learning platform and reporting workflows — a mix of software, data, product context and understanding how real teams actually use systems.</p>
+          <figure class="scrap-photo wide rotate-right">
+            <img src="assets/harman-team.jpeg" width="1400" height="1050" loading="lazy" decoding="async" alt="HARMAN team group photo" />
+            <figcaption>one of those “oh wow, I’m actually doing this” moments.</figcaption>
+          </figure>
+        </article>
+
+        <article class="timeline-card reveal">
+          <div class="dot"></div>
+          <div class="year">2026</div>
+          <h3>NIC · Software Development Intern</h3>
+          <p>Worked around data processing, operational workflows, access controls and large-scale systems — the kind of work that made “software at scale” feel much more real.</p>
+          <div class="paper-note">the more I work on real systems, the more I like the part where tech meets actual human workflows.</div>
+        </article>
+
+        <article class="timeline-card reveal">
+          <div class="dot"></div>
+          <div class="year">2025–26</div>
+          <h3>FOL · Fraternity of Leaders</h3>
+          <p>One of the spaces where I grew into leadership more intentionally — working with people, coordinating responsibilities, and learning that communities are built through consistency, not just big moments.</p>
+          <figure class="scrap-photo small rotate-left">
+            <img src="assets/community-team.jpeg" width="1400" height="1050" loading="lazy" decoding="async" alt="FOL student community group photo" />
+            <figcaption>FOL — the people, the effort, the memories.</figcaption>
+          </figure>
+        </article>
+
+        <article class="timeline-card reveal">
+          <div class="dot"></div>
+          <div class="year">now</div>
+          <h3>Still becoming.</h3>
+          <p>Learning, building, interviewing, experimenting, and trying not to turn every idea into a side project.</p>
+          <div class="paper-note">still figuring things out, still showing up, still becoming the version of me I’m working toward.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────── TOOLKIT ───────── -->
+    <section class="section toolkit" id="toolkit">
+      <div class="section-heading reveal">
+        <span class="kicker">03 · toolkit</span>
+        <h2>Things I reach for.</h2>
+        <p>No skill bars or percentages — just what I’ve actually used to build the things below. Tap a tab to reshuffle the stickers.</p>
+      </div>
+
+      <div class="skill-tabs reveal" role="tablist" aria-label="Toolkit categories">
+        <button class="skill-tab" role="tab" data-tab="all" aria-selected="true">everything</button>
+        <button class="skill-tab" role="tab" data-tab="lang" aria-selected="false" tabindex="-1">languages</button>
+        <button class="skill-tab" role="tab" data-tab="web" aria-selected="false" tabindex="-1">web</button>
+        <button class="skill-tab" role="tab" data-tab="ml" aria-selected="false" tabindex="-1">data &amp; ML</button>
+        <button class="skill-tab" role="tab" data-tab="people" aria-selected="false" tabindex="-1">people stuff</button>
+      </div>
+
+      <div class="sticker-board reveal" role="tabpanel" aria-live="polite">
+        <span class="sticker" data-cat="lang" style="--r:-2deg"><b>Py</b>Python</span>
+        <span class="sticker" data-cat="lang" style="--r:1.6deg"><b>JS</b>JavaScript</span>
+        <span class="sticker" data-cat="lang" style="--r:-1deg"><b>&lt;/&gt;</b>HTML &amp; CSS</span>
+        <span class="sticker" data-cat="web" style="--r:2deg"><b>Re</b>React</span>
+        <span class="sticker" data-cat="web" style="--r:-1.6deg"><b>No</b>Node.js</span>
+        <span class="sticker" data-cat="web" style="--r:1deg"><b>Ex</b>Express</span>
+        <span class="sticker" data-cat="web ml" style="--r:-2.2deg"><b>FA</b>FastAPI</span>
+        <span class="sticker" data-cat="web" style="--r:1.4deg"><b>JWT</b>Auth flows</span>
+        <span class="sticker" data-cat="web" style="--r:-1.2deg"><b>Mg</b>MongoDB</span>
+        <span class="sticker" data-cat="web" style="--r:2.2deg"><b>◎</b>Maps &amp; live location</span>
+        <span class="sticker" data-cat="ml" style="--r:-1.8deg"><b>TF</b>TensorFlow</span>
+        <span class="sticker" data-cat="ml" style="--r:1.2deg"><b>CV</b>OpenCV</span>
+        <span class="sticker" data-cat="ml" style="--r:-1.4deg"><b>sk</b>scikit-learn</span>
+        <span class="sticker" data-cat="ml" style="--r:2deg"><b>∿</b>Anomaly detection</span>
+        <span class="sticker" data-cat="people" style="--r:-2deg"><b>✎</b>Product thinking</span>
+        <span class="sticker" data-cat="people" style="--r:1.5deg"><b>♡</b>Community building</span>
+        <span class="sticker" data-cat="people" style="--r:-1deg"><b>✦</b>Event organising</span>
+        <span class="sticker" data-cat="people" style="--r:1.8deg"><b>☺</b>Public speaking</span>
+        <span class="sticker" data-cat="people" style="--r:-1.6deg"><b>⌘</b>Making messy systems simpler</span>
+      </div>
+    </section>
+
+    <!-- ───────── WORK ───────── -->
+    <section class="section work" id="work">
+      <div class="section-heading reveal">
+        <span class="kicker">04 · things I’ve built</span>
+        <h2>Projects that taught me something.</h2>
+        <p>Not every project has to be groundbreaking. I care more about whether I understood something better after building it.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal" tabindex="0">
+          <span class="project-no">01</span>
+          <div class="project-tag">full stack · analytics</div>
+          <h3>Library Management + Analytics</h3>
+          <p>A React, Node and MongoDB system for issue/return workflows, recommendations, notifications and usage analytics.</p>
+          <div class="chips"><span>React</span><span>Node.js</span><span>MongoDB</span><span>JWT</span></div>
+          <button class="peek-btn" data-modal="library">open scrapbook note ↗</button>
+          <div class="card-links" data-links="library"></div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0">
+          <span class="project-no">02</span>
+          <div class="project-tag">safety · backend</div>
+          <h3>SheShield</h3>
+          <p>A women-safety emergency system with live location, multi-tier SOS escalation, risk zones and offline fallback.</p>
+          <div class="chips"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Maps</span></div>
+          <button class="peek-btn" data-modal="sheshield">open scrapbook note ↗</button>
+          <div class="card-links" data-links="sheshield"></div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0">
+          <span class="project-no">03</span>
+          <div class="project-tag">computer vision · ML</div>
+          <h3>SignBridge</h3>
+          <p>A sign-language translation semester project that recognises hand gestures and turns them into text in real time.</p>
+          <div class="chips"><span>Python</span><span>TensorFlow</span><span>OpenCV</span><span>FastAPI</span></div>
+          <button class="peek-btn" data-modal="signbridge">open scrapbook note ↗</button>
+          <div class="card-links" data-links="signbridge"></div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0">
+          <span class="project-no">04</span>
+          <div class="project-tag">ML · healthcare</div>
+          <h3>Wearable Health Monitoring</h3>
+          <p>Real-time sensor streams, anomaly detection and alerting — built to understand what practical ML systems need beyond a model score.</p>
+          <div class="chips"><span>FastAPI</span><span>scikit-learn</span><span>Python</span></div>
+          <button class="peek-btn" data-modal="health">open scrapbook note ↗</button>
+          <div class="card-links" data-links="health"></div>
+        </article>
+      </div>
+
+      <div class="patent-strip reveal" id="patent">
+        <div class="patent-copy">
+          <span class="kicker">also on the shelf</span>
+          <h3>Published patent · autonomous charging of multiple UAVs</h3>
+        </div>
+
+        <svg class="uav" viewBox="0 0 300 120" role="img" aria-label="Small drones hovering above a charging pad" >
+          <defs>
+            <symbol id="drone" viewBox="0 0 40 22">
+              <line x1="7" y1="8" x2="33" y2="8" class="d-arm"/>
+              <rect x="15" y="8" width="10" height="6" rx="3" class="d-body"/>
+              <line x1="20" y1="14" x2="20" y2="18" class="d-arm"/>
+              <ellipse class="rotor r1" cx="7" cy="6" rx="6" ry="1.5"/>
+              <ellipse class="rotor r2" cx="33" cy="6" rx="6" ry="1.5"/>
+            </symbol>
+          </defs>
+          <path class="uav-path" d="M14 30 C 70 6, 120 6, 150 56" />
+          <rect class="uav-pad" x="112" y="100" width="76" height="8" rx="4"/>
+          <path class="uav-bolt" d="M204 96 l-9 -14 h7 l-3 -12 l12 16 h-7 z"/>
+          <use href="#drone" class="uav-a" x="126" y="60" width="48" height="26.4"/>
+          <use href="#drone" class="uav-b" x="24" y="40" width="40" height="22"/>
+          <use href="#drone" class="uav-c" x="232" y="22" width="34" height="18.7"/>
+        </svg>
+
+        <p>One of the stranger sentences I can now say about my undergraduate life.</p>
+      </div>
+    </section>
+
+    <!-- ───────── MOMENTS ───────── -->
+    <section class="section moments torn-top torn-bottom" id="moments">
+      <div class="section-heading reveal">
+        <h2>Little moments.</h2>
+      </div>
+
+      <div class="wall-tools reveal">
+        <p class="handwritten hint-fine">psst — you can drag these around ♡</p>
+        <p class="handwritten hint-touch">tap a photo to make it wiggle ♡</p>
+        <button class="btn ghost" id="shuffle" type="button">shuffle the pile ↻</button>
+      </div>
+
+      <div class="photo-wall">
+        <figure class="wall-photo p1 drag reveal"><img src="assets/vit-speaking.jpeg" width="1200" height="1600" loading="lazy" decoding="async" alt="Saanvi speaking at VIT Chennai" draggable="false"><figcaption>stage nerves → stage stories</figcaption></figure>
+        <figure class="wall-photo p2 drag reveal"><img src="assets/hackclub-portrait.jpeg" width="1100" height="1467" loading="lazy" decoding="async" alt="Saanvi at Hack Club" draggable="false"><figcaption>organising chaos, somehow smiling</figcaption></figure>
+        <figure class="wall-photo p3 drag reveal"><img src="assets/community-team.jpeg" width="1400" height="1050" loading="lazy" decoding="async" alt="FOL student community group photo" draggable="false"><figcaption>the people who make the chaos worth it</figcaption></figure>
+        <figure class="wall-photo p4 drag reveal"><img src="assets/hacknight-team.jpeg" width="1400" height="1050" loading="lazy" decoding="async" alt="HackNight group photo" draggable="false"><figcaption>the people behind the event</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ───────── BEYOND ───────── -->
+    <section class="section beyond" id="beyond">
+      <div class="section-heading reveal">
+        <span class="kicker">06 · beyond work</span>
+        <h2>The non-resume version.</h2>
+        <p class="handwritten hint-fine">hover a card — some of my favourite quotes on the back.</p>
+        <p class="handwritten hint-touch">tap a card — some of my favourite quotes on the back.</p>
+      </div>
+      <div class="beyond-grid reveal">
+        <button type="button" class="flip"><span class="flip-inner"><span class="face front">🍲<span>good food</span></span><span class="face back">live and let live.</span></span></button>
+        <button type="button" class="flip"><span class="flip-inner"><span class="face front">💬<span>conversations</span></span><span class="face back">beauty is in the eye of the beholder.</span></span></button>
+        <button type="button" class="flip"><span class="flip-inner"><span class="face front">⌁<span>music on repeat</span></span><span class="face back">love is being kind to yourself every day.</span></span></button>
+        <button type="button" class="flip"><span class="flip-inner"><span class="face front">◌<span>photos of little things</span></span><span class="face back">every cloud has a silver lining.</span></span></button>
+        <button type="button" class="flip"><span class="flip-inner"><span class="face front">🐾<span>loving animals</span></span><span class="face back">animals teach you what real unconditional love is.</span></span></button>
+        <button type="button" class="flip"><span class="flip-inner"><span class="face front">🙏<span>hope &amp; faith</span></span><span class="face back">trust god’s plan.</span></span></button>
+      </div>
+    </section>
+
+    <!-- ───────── CONTACT ───────── -->
+    <section class="section contact torn-top" id="contact">
+      <div class="contact-card reveal">
+        <span class="tape tape-corner"></span>
+        <p class="handwritten big">thanks for being here ♡</p>
+        <h2>That’s me, for now.</h2>
+        <p class="contact-lede">This page will keep changing as I do. Leave a note, or find me here:</p>
+
+        <div class="contact-grid">
+          <form class="postcard" id="postcard" novalidate>
+            <div class="stamp" aria-hidden="true"><span>✦</span><small>post</small></div>
+            <p class="pc-to">dear Saanvi,</p>
+            <label class="sr-only" for="pc-msg">Your message</label>
+            <textarea id="pc-msg" name="message" rows="5" placeholder="say hi, ask something, or tell me what you’re building…" required></textarea>
+            <div class="pc-from"><label for="pc-name">from</label><input id="pc-name" name="name" type="text" placeholder="your name" autocomplete="name" required></div>
+            <div class="pc-from"><label for="pc-email">reply to</label><input id="pc-email" name="email" type="email" placeholder="your email" autocomplete="email"></div>
+            <p class="pc-error" id="pc-error" role="alert"></p>
+            <button class="btn primary" type="submit">send the postcard ✦</button>
+            <p class="pc-note">Email is optional. Sending opens your email app with the message ready to go.</p>
+          </form>
+
+          <div class="link-col">
+            <div class="link-row">
+              <a href="https://www.linkedin.com/" data-link="linkedin" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              <a href="https://github.com/" data-link="github" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href="mailto:hello@example.com" data-link="email">Email ↗</a>
+              <a data-resume hidden download>Resume ↓</a>
+            </div>
+            <button class="copy-email" type="button" id="copy-email">copy my email</button>
+            <svg class="lily lily-contact" viewBox="0 0 140 180" aria-hidden="true">
+              <path pathLength="1" style="--i:0" d="M70 173 C72 131 78 92 80 58"/>
+              <path pathLength="1" style="--i:1" d="M80 65 C56 56 42 39 35 20 C58 21 75 35 80 55"/>
+              <path pathLength="1" style="--i:2" d="M81 66 C101 54 118 37 125 18 C100 20 84 34 80 56"/>
+              <path pathLength="1" style="--i:3" d="M80 62 C69 38 70 20 80 6 C91 24 91 42 80 62"/>
+              <path pathLength="1" style="--i:4" d="M75 102 C56 91 46 81 39 66"/>
+              <path pathLength="1" style="--i:5" d="M79 120 C95 110 106 96 112 84"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-paper">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <span class="tape tape-modal"></span>
+      <p class="kicker" id="modal-kicker">project note</p>
+      <h2 id="modal-title">Project</h2>
+      <p id="modal-copy"></p>
+      <div id="modal-bullets"></div>
+      <div class="modal-links" id="modal-links"></div>
+      <div class="modal-nav">
+        <button type="button" data-nav="-1">← previous note</button>
+        <button type="button" data-nav="1">next note →</button>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <span>made with code, paper textures &amp; too many tiny decisions ✦ <span id="year"></span></span>
+    <a href="#top">back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
